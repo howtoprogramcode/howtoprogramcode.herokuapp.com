@@ -1,3 +1,3 @@
-# How To Record Music - Blog
+# How To Program Code - Blog
 
 Coming soon
