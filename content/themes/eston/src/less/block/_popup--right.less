@@ -1,0 +1,26 @@
+//
+// Popup - Right.
+// -----------------------------------------------------------------------------
+// Popup that has a right anchored start point.
+//
+// <div class="popup">
+//   <a class="popup-link">New</a>
+//   <a class="popup-link">Share</a>
+//   <a class="popup-link">Edit</a>
+//   <span class="popupp-item">1 of 3</span>
+// </div>
+//
+
+// Block.
+.popup--right {
+  right: -( @space / 2 );
+  margin-bottom: @space / 2;
+  -webkit-transform: translate( 0%, 0 );
+  -moz-transform: translate( 0%, 0 );
+  transform: translate( 0%, 0 );
+}
+.popup--right:before,
+.popup--right:after {
+  right: @space;
+}
+ 

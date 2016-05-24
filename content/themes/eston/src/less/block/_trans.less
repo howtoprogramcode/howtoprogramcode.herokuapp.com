@@ -1,0 +1,41 @@
+//
+// Trans.
+// -----------------------------------------------------------------------------
+// Transcript of a chat / conversation.
+//
+// <div class="trans">
+// 	 <div class="trans-item trans-item-odd">
+//     <span class="trans-title">Dave</span>
+//     <span class="trans-text">Shes my wife now</span>
+//   </div>
+// 	 <div class="trans-item trans-item-even">
+//     <span class="trans-title">Shop Keeper</span>
+//     <span class="trans-text"></span>
+//   </div>
+// </div>
+//
+
+// Block.
+.trans {
+	display: table;
+	width: 100%;
+	&:extend( .whitespace );
+}
+
+// Elements.
+.trans-item {
+	display: table;
+	padding-bottom: @space / 2;
+}
+.trans-title {
+	display: table-row;
+	&:extend( .s2 );
+}
+.trans-text {
+	display: table-row;
+}
+
+// Clear whitespace.
+.trans .trans-item:last-child {
+	padding-bottom: 0;
+}

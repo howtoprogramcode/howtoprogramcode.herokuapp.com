@@ -1,0 +1,21 @@
+{{!
+
+    Renders:
+      Tags
+
+    Microdata:
+      Keywords
+
+}}
+
+{{#foreach tags}}
+{{#if @first}}
+<div class="btn post-tags" data-js="tags">
+{{/if}}
+  <a href="{{url}}" title="{{name}}" class="btn-item">
+    <span itemprop="keywords">{{slug}}</span>
+  </a>
+{{#if @last}}
+</div>
+{{/if}}
+{{/foreach}}

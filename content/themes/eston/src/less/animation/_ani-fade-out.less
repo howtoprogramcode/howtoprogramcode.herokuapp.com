@@ -1,0 +1,32 @@
+//
+// Fade Out.
+// -----------------------------------------------------------------------------
+// Element fades out.
+//
+
+[data-ani="fade-out"] {
+  -webkit-animation-name: fade-out;
+  animation-name: fade-out;
+}
+.ie [data-ani="fade-out"] {
+  visibility: hidden;
+  opacity: 0;
+}
+
+// Keyframes.
+@-webkit-keyframes fade-out {
+  0% {
+  }
+  100% {
+    visibility: hidden;
+    opacity: 0;
+  }
+}
+@keyframes fade-out {
+  0% {
+  }
+  100% {
+    visibility: hidden;
+    opacity: 0;
+  }
+}

@@ -1,0 +1,57 @@
+//
+// Header.
+// -----------------------------------------------------------------------------
+// Skin for header.
+//
+
+// Block.
+.header {}
+
+// Elements.
+.header-title {
+  color: @header-title;
+}
+.header-about {
+  color: @header-about;
+}
+.header-title {
+  border-bottom: 1px solid @header-border;
+}
+.header-nav,
+.header-social {
+  border-top: 1px solid @header-border;
+}
+.header-title + .header-nav,
+.header-title + .header-social {
+  border-top: 0;
+}
+.header-about a {
+  color: @header-anchor;
+}
+.header-about a:hover {
+  color: @header-anchor-hover;
+}
+.header-social .nav-link:before {
+  color: @header-anchor;
+}
+.header-social .nav-link:hover:before {
+  color: @header-anchor-hover;
+}
+.header-credits .nav-link {
+  color: @header-credit;
+}
+.header-credits .nav-link:hover {
+  color: @header-credit-hover;
+}
+
+// Media Queries.
+@media( min-width: @break-five-query ) {
+  .header-nav,
+  .header-social {
+    border-top: 0;
+  }
+  .header-nav .nav-item:first-child .nav-link:before,
+  .header-social .nav-link:first-child:after {
+    border-top: 1px solid @header-border;
+  }
+}

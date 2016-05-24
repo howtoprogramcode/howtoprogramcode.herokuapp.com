@@ -1,0 +1,27 @@
+//
+// Meta.
+// -----------------------------------------------------------------------------
+// Skin for meta.
+//
+
+// Block.
+.meta {
+	color: @meta;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+// Elements.
+.meta-link {
+	color: inherit;
+}
+.meta-item:before,
+.meta-link:before {
+  color: @meta-icon;
+}
+.meta-link:hover {
+  color: @meta-hover;
+}
+.meta-link:hover:before {
+  color: @meta-icon-hover;
+}

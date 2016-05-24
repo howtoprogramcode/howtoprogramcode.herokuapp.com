@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<!--[if lte IE 9 ]> <html itemscope itemtype="http://schema.org/Blog" class="ie"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html itemscope itemtype="http://schema.org/Blog"> <!--<![endif]-->
+  <head>
+
+    {{! Document Settings }}
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    {{! Page Meta }}
+    <title>{{meta_title}}</title>
+    <meta name="description" content="{{meta_description}}">
+
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="Designer" content="erictherobot">
+
+    <link rel="shortcut icon" href="{{asset "favicon.ico"}}">
+
+    {{! Theme CSS }}
+    <link rel="stylesheet" href="{{asset "css/eston-layout.min.css"}}">
+    <link rel="stylesheet" href="{{asset "css/eston-skin-default.min.css"}}">
+
+    {{! Ghost Header }}
+    {{ghost_head}}
+
+  </head>
+
+  <body>
+
+    <div class="wrapper">
+
+      <header role="header" class="header" data-js="header">
+        <div class="wrapper header-wrapper">
+
+          {{! Credits }}
+          {{> "credits" }}
+
+          {{! Title }}
+          {{> "title" }}
+
+          {{! Description }}
+          <!-- {{> "description" }} -->
+
+          {{! Navigation }}
+          {{> "navigation" }}
+
+          {{! Social Links }}
+          {{> "social-links" }}
+
+        </div>
+      </header>
+
+      <main role="main" class="main" data-js="main">
+
+        <div class="wrapper" data-js="posts">
+
+          {{! Posts }}
+          {{{body}}}
+
+        </div>
+
+        {{! Mailchimp Subscription Box }}
+        {{> "subscribe" }}
+
+        {{! Pagination }}
+        {{#if pagination.prev}}
+          {{pagination}}
+        {{else}}
+        {{#if pagination.next}}
+          {{pagination}}
+        {{/if}}
+        {{/if}}
+
+      </main>
+
+    </div>
+
+    {{! Footer }}
+    {{>footer}}
+
+    {{! Ghost Footer }}
+    {{ghost_foot}}
+
+    {{! Theme Javascript }}
+    <script src="{{asset "js/eston-core.min.js"}}"></script>
+
+    <script>
+
+      // Default config objects.
+      var config = {
+        disqus : {},
+        dribbble : {
+          data : {}
+        },
+        google : {},
+        instagram : {
+          data : {}
+        },
+        share : {
+          data : {}
+        }
+      };
+
+      // User config.
+      {{> "config" }}
+
+      // Events.
+      eston.events.on( 'hover.start', function ( e, $header, $cover, $footer ) {
+        $header.attr( 'data-ani', 'slide-in-down-sm' );
+        $cover.attr( 'data-ani', 'fade-in' );
+        $footer.attr( 'data-ani', 'slide-in-up-sm' );
+      });
+      eston.events.on( 'hover.stop', function ( e, $header, $cover, $footer ) {
+        $header.attr( 'data-ani', 'fade-out-up-sm' );
+        $cover.attr( 'data-ani', 'fade-out' );
+        $footer.attr( 'data-ani', 'fade-out-down-sm' );
+      });
+      eston.events.on( 'share.open', function ( e, $share, $list ) {
+        $list.attr( 'data-ani', 'slide-in-up-sm' );
+      });
+      eston.events.on( 'share.close', function ( e, $share, $list ) {
+        $list.attr( 'data-ani', 'fade-out-down-sm' );
+      });
+      eston.events.on( 'start.complete', function ( e, $posts ) {
+        $posts.attr( 'data-ani', 'slide-in-up' );
+      });
+
+      // Start.
+      eston.start( config );
+
+    </script>
+
+    {{! Disqus Javascript }}
+    {{> "disqus/javascript" }}
+
+    {{! Google Analytics Javascript }}
+    {{> "google/javascript" }}
+
+  </body>
+</html>

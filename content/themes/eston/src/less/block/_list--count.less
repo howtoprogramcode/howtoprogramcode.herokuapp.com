@@ -1,0 +1,35 @@
+// List - Count.
+// -----------------------------------------------------------------------------
+// Replicates an ordered list, but uses puesdo elements for styling purposes.
+//
+// <ul class="list list--count">
+//   <li class="list-item">Get Milk</li>
+// </ul>
+//
+// <div class="list list--count">
+//   <a href="#" class="list-item">Apples</a>
+//   <a href="#" class="list-item">Oranges</a>
+//   <a href="#" class="list-item">Pears</a>
+// </div>
+//
+
+// Block.
+.list--count {
+  counter-reset: section;
+}
+
+// Elements.
+.list--count .list-item {
+  position: relative;
+  padding-left: @space * 1.25;
+}
+
+.list--count .list-item:before {
+  position: absolute;
+  left: 0;
+  width: @space;
+  counter-increment: section;
+  content: counter( section ) '.';
+  font-family: inherit;
+  font-size: 1em;
+}

@@ -1,0 +1,52 @@
+{{!
+
+    Renders:
+      Page Author Link
+      Page Author Image
+      Page Author Name
+      Page Title
+      Page Image / Embed
+      Page Content
+
+    Microdata:
+      BlogPosting Headline
+      BlogPosting Url
+      BlogPosting Name
+      BlogPosting Image
+      BlogPosting Published
+
+}}
+
+{{!< default}}
+
+{{#post}}
+
+<article itemscope itemtype="http://schema.org/BlogPosting" class="post{{^if image}}{{^has tag="_photo, _quote, _link, _chat, _audio, _video"}} post--text{{/has}}{{/if}}{{#if image}} post--cover{{^has tag="_quote, _link, _chat, _audio, _video"}} post--photo{{/has}}{{/if}}{{#has tag="_quote"}} post--quote{{/has}}{{#has tag="_link"}} post--link{{/has}}{{#has tag="_chat"}} post--chat{{/has}}{{#has tag="_audio"}} post--cover post--audio{{/has}}{{#has tag="_video"}} post--cover post--video{{/has}} post--page" id="{{id}}" data-ani="hide" data-js="post">
+  
+  <div class="post-inner">
+
+    <header class="post-section post-header">
+      <div class="wrapper post-wrapper">
+
+      {{> "post/author" }}
+
+      </div>
+    </header>
+
+    {{> "post/media" }}
+
+    <section class="post-section post-body">
+      <div class="wrapper post-wrapper">
+
+        {{> "post/title" }}
+
+        {{> "post/content" }}
+
+      </div>
+    </section>
+
+  </div>
+
+</article>
+
+{{/post}}

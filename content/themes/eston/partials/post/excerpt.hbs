@@ -1,0 +1,35 @@
+{{!
+
+    Renders:
+      Post Excerpt - Text, Photo, Audio, Video
+      Post Content - Link, Quote, Chat
+
+    Microdata:
+      Description - Text, Photo, Audio, Video
+
+}}
+
+
+{{! Post Text }}
+{{^if image}}
+{{^has tag="_photo, _quote, _link, _chat, _audio, _video"}}
+<p itemprop="description" class="post-excerpt" data-js="excerpt">{{excerpt words="40"}}</p>
+{{/has}}
+{{/if}}
+
+{{! Post Photo }}
+{{#if image}}
+{{^has tag="_quote, _link, _chat, _audio, _video"}}
+<p itemprop="description" class="post-excerpt" data-js="excerpt">{{excerpt words="40"}}</p>
+{{/has}}
+{{/if}}
+
+{{! Post Audio + Video }}
+{{#has tag="_audio, _video"}}
+<p itemprop="description" class="post-excerpt" data-js="excerpt">{{excerpt words="40"}}</p>
+{{/has}}
+
+{{! Post Link + Quote + Chat }}
+{{#has tag="_link, _quote, _chat"}}
+	{{content}}
+{{/has}}

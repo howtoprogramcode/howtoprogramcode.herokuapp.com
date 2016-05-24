@@ -1,0 +1,114 @@
+//
+// Post Small.
+// -----------------------------------------------------------------------------
+// Post that is half the size of a normal post, ala square. Always in pairs.
+//
+
+// Block.
+.post--small {
+  position: relative;
+  height: 0;
+  width: 100%;
+  padding-top: 100%;
+}
+
+// Elements.
+.post--small .post-inner {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: auto;
+  height: auto;
+}
+.post--small .post-wrapper {
+  max-width: 100%;
+}
+
+// Media Queries.
+@media( min-width: @break-three-query ) {
+  .post--small {
+    width: 50%;
+    padding-top: 50%;
+  }
+  // Always set the second element to have a margin.
+  .post--small + .post--small {
+    margin-bottom: @space * 1.25;
+  }
+  // To counter whitespace from `.post-inner`, use a negative margin.
+  // If the second element is last, use a negative margin as well.
+  .post--small,
+  .post--small + .post--small:last-child {
+    margin-bottom: -@space * 1.25;
+  }
+  .post--small .post-inner {
+    right: @space * 1.125;
+    bottom: @space * 1.125;
+  }
+  .post--small + .post--small .post-inner {
+    right: 0;
+    left: @space * 1.125;
+  }
+  .post--small .post-section {
+    padding-top: @space;
+  }
+}
+@media( min-width: @break-four-query ) {
+  .post--small + .post--small {
+    margin-bottom: @space * 1.625;
+  }
+  .post--small,
+  .post--small + .post--small:last-child {
+    margin-bottom: -@space * 1.625;
+  }
+  .post--small .post-inner {
+    right: @space * 1.625;
+    bottom: @space * 1.625;
+  }
+  .post--small + .post--small .post-inner {
+    right: 0;
+    left: @space * 1.625;
+  }
+  .post--small .post-section {
+    padding: @space * 1.5;
+  }
+}
+@media( min-width: @break-five-query ) {
+  .post--small + .post--small {
+    margin-bottom: @space * 2.5625;
+  }
+  .post--small,
+  .post--small + .post--small:last-child {
+    margin-bottom: -@space * 2.5625;
+  }
+  .post--small .post-inner {
+    right: @space * 2.5625;
+    bottom: @space * 2.5625;
+  }
+  .post--small + .post--small .post-inner {
+    left: @space 2.5625;
+  }
+  .post--small .post-section {
+    padding: @space;
+  }
+}
+@media( min-width: @break-six-query ) {
+  .post--small + .post--small {
+    margin-bottom: @space * 3.5625;
+  }
+  .post--small,
+  .post--small + .post--small:last-child {
+    margin-bottom: -@space * 3.5625;
+  }
+  .post--small .post-inner {
+    right: @space * 3.5625;
+    bottom: @space * 3.5625;
+  }
+  .post--small + .post--small .post-inner {
+    left: @space * 3.5625;
+  }
+  .post--small .post-section {
+    padding: @space * 2;
+  }
+}

@@ -1,0 +1,61 @@
+//
+// Config - Layout.
+// -----------------------------------------------------------------------------
+
+// Space
+// -----------------------------------------------------------------------------
+@space: 16px;
+
+// Type
+// -----------------------------------------------------------------------------
+//
+// 15px - 35cpl  - 200px.
+// 15px - 40cpl  - 265px.
+// 15px - 60cpl  - 400px.
+// 15px - 75cpl  - 495px;
+// 16px - 60cpl  - 425px.
+// 16px - 75cpl  - 530px.
+// 16px - 80cpl  - 600px.
+// 17px - 60cpl  - 440px.
+// 17px - 75cpl  - 560px.
+// 17px - 80cpl  - 600px.
+// 17px - 80cpl  - 675px.
+// 17px - 100cpl - 750px.
+//
+
+@type-max-one:   275px;
+@type-max-two:   436px;
+@type-max-three: 530px;
+@type-max-four:  606px;
+@type-max-five:  800px;
+
+// Images
+// -----------------------------------------------------------------------------
+@img-max-one: 500px;
+@img-max-two: 640px;
+@img-max-three: 1024px;
+
+// Sidebar
+// -----------------------------------------------------------------------------
+@sidebar: 320px - @space * 2;
+
+// Break Points.
+// -----------------------------------------------------------------------------
+
+// One.
+@break-one-max: ( @type-max-one + ( @space * 4 ) );
+// Two.
+@break-two-query: ( @type-max-one + ( @space * 3 ) + ( @space * 3 ) + 15px );
+@break-two-max: ( @img-max-one + ( @space * 3 ) );
+// Three.
+@break-three-query: ( @img-max-one + ( @space * 4 ) + 15px );
+@break-three-max: ( @type-max-three + ( @space * 4 ) + ( @space * 8 ) );
+// Four.
+@break-four-query: ( @type-max-three + ( @space * 6 ) + ( @space * 8 ) + 15px );
+@break-four-max: ( @type-max-four + ( @space * 18 ) );
+// Five.
+@break-five-query: ( @img-max-two  + ( @space * 10 ) + ( @space * 5 ) + @sidebar + 15px );
+@break-five-max: ( @img-max-two + ( @space * 10 ) + ( @space * 5 ) + ( @space * 10 ) + @sidebar );
+// Six.
+@break-six-query: ( @img-max-two + ( @space * 14 ) + ( @space * 7 ) + ( @space * 14 ) + @sidebar + 15px);
+@break-six-max: ( @img-max-three + ( @space * 14 ) + ( @space * 7 ) +  @sidebar );

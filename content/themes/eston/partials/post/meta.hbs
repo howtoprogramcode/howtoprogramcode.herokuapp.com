@@ -1,0 +1,27 @@
+{{!
+
+    Renders:
+      Meta
+      Meta Date
+      Meta Comments Count
+      Meta Social Shares Count
+      Meta Social Shares List
+
+    Microdata:
+      Published
+
+}}
+
+<div class="meta post-meta">
+
+  <a itemprop="datePublished" href="{{url}}" class="icon-ui icon-ui-date meta-link meta-date">
+    <span class="meta-count">{{date published_at timeago="true"}}</span>
+  </a>
+
+  {{! Disqus Comment Count }}
+  {{!> "disqus/comment-count" }}
+
+  {{! Social Shares }}
+  {{!> "post/social-shares" }}
+
+</div>

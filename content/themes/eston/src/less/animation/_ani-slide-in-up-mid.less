@@ -1,0 +1,41 @@
+//
+// Slide In Up Middle Small.
+// -----------------------------------------------------------------------------
+// Element slides in and up, from 1 space below its final position, central to
+// its parent element.
+//
+
+[data-ani="slide-in-up-mid"] {
+  -webkit-animation-name: slide-in-up-mid;
+  animation-name: slide-in-up-mid;
+}
+.ie [data-ani="slide-in-up-mid"] {
+  visibility: visible;
+  opacity: 1;
+}
+
+// Keyframes.
+@-webkit-keyframes slide-in-up-mid {
+  0% {
+    visibility: visible;
+    opacity: 1;
+    -webkit-transform: translate( 50%, @space );
+  }
+  100% {
+    visibility: visible;
+    opacity: 1;
+    -webkit-transform: translate( 50%, 0 );
+  }
+}
+@keyframes slide-in-up-mid {
+  0% {
+    visibility: visible;
+    opacity: 1;
+    transform: translate( 50%, @space );
+  }
+  100% {
+    visibility: visible;
+    opacity: 1;
+    transform: translate( 50%, 0 );
+  }
+}

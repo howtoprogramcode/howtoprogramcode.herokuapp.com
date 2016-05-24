@@ -1,0 +1,38 @@
+//
+// Meta.
+// -----------------------------------------------------------------------------
+// Meta is complicated.
+//
+
+// Block.
+.meta {
+  display: table;
+  width: 100%;
+  &:extend( .whitespace );
+  &:extend( .s2 );
+}
+
+// Elements.
+.meta-item,
+.meta-link {
+  display: table-cell;
+  white-space: nowrap;
+  position: relative;
+  padding-right: @space / 2;
+}
+.meta-date {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+  max-width: 0;
+}
+.meta-share {
+  position: relative;
+  cursor: pointer;
+}
+.meta-count {
+  margin-left: -5px;
+}
+.meta .meta-link:last-child {
+  padding-right: 0;
+}

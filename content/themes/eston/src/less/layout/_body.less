@@ -1,0 +1,54 @@
+//
+// Body.
+// -----------------------------------------------------------------------------
+// Layout styles for body.
+//
+
+// Block.
+body {
+  overflow-y: scroll;
+}
+
+// Elements.
+body > .wrapper {
+  max-width: @break-one-max;
+  padding-right: @space * .5;
+  padding-left: @space * .5;
+}
+
+// Media Queries.
+@media( min-width: @break-two-query ) {
+  body > .wrapper {
+    max-width: @break-two-max;
+    padding-right: @space * 1.5;
+    padding-left: @space * 1.5;
+  }
+}
+@media( min-width: @break-three-query ) {
+  body > .wrapper {
+    max-width: @break-three-max;
+    padding-right: @space * 2;
+    padding-left: @space * 2;
+  }
+}
+@media( min-width: @break-four-query ) {
+  body > .wrapper {
+    max-width: @break-four-max;
+    padding-right: @space * 3;
+    padding-left: @space * 3;
+  }
+}
+@media( min-width: @break-five-query ) {
+  body > .wrapper {
+    max-width: @break-five-max;
+    padding-right: @space * 5;
+    padding-left: @space * 5;
+  }
+}
+@media( min-width: @break-six-query ) {
+  body > .wrapper {
+    max-width: @break-six-max;
+    padding-right: @space * 7;
+    padding-left: @space * 7;
+  }
+}

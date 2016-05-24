@@ -1,0 +1,32 @@
+{{!
+
+    Renders:
+      Image - Photo
+			Embed - Audio, Video
+		
+		Microdata:
+      Image - Photo
+
+}}
+
+{{! Post Photo }}
+{{#if image}}
+{{^has tag="_quote, _link, _chat, _audio, _video"}}
+<figure class="post-media">
+  <a itemprop="url" href="{{url}}" title="{{title}}"><img itemprop="image" src="{{ image }}" alt="{{ title }}"></a>
+</figure>
+{{#has tag="_overlay"}}
+<div class="post-cover" data-ani="hide" data-js="hover-cover"></div>
+{{/has}}
+{{/has}}
+{{/if}}
+
+{{! Post Audio + Video }}
+{{#has tag="_audio, _video"}}
+<figure class="post-media" data-js="media fluid">
+  {{content words="0"}}
+</figure>
+{{/has}}
+
+
+

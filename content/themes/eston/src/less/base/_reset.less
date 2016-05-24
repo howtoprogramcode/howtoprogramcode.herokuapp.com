@@ -1,0 +1,102 @@
+//
+// Reset.
+// -----------------------------------------------------------------------------
+// Resets browser to workable state. Doesn't include any layout specifics.
+//
+
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+*:focus {
+  outline: none;
+}
+html {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+body {
+  margin: 0;
+}
+h1, h2, h3, h4, h5, h6 {
+  a, a:hover {
+    color: inherit;
+    border-bottom: 0;
+  }
+}
+img,
+object,
+iframe,
+embed {
+  max-width: 100%;
+  vertical-align: middle;
+  border: 0;
+  font-style: italic;
+}
+figure {
+  margin: 0;
+}
+figure > img,
+figure > object,
+figure > iframe,
+figure > embed,
+figure > p,
+figure > blockquote,
+figure > a,
+figure > ol {
+  width: 100%;
+  margin-bottom: 0;
+}
+ul,
+ol {
+  margin-top: 0;
+}
+li > ul,
+li > ol {
+  margin-bottom: 0;
+}
+pre,
+code {
+  font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
+  font-size: .9em;
+}
+pre {
+  white-space: pre;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+pre > code,
+pre > code:hover {
+  padding: 0;
+  background: inherit;
+  color: inherit;
+  border-radius: 0;
+}
+blockquote > p:last-child {
+  margin-bottom: 0;
+}
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+  font-size: 100%;
+  margin: 0;
+}
+textarea {
+  vertical-align: top;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+hr {
+  margin-top: 0;
+  height: 0;
+  border-right: 0;
+  border-bottom: 0;
+  border-left: 0;
+}

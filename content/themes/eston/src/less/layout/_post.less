@@ -1,0 +1,239 @@
+//
+// Post.
+// -----------------------------------------------------------------------------
+// Post layout styles.
+//
+
+// Containers.
+.post {
+  float: left;
+  width: 100%;
+  margin-bottom: @space * 1.5;
+}
+.post-inner {
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  float: left;
+  width: 100%;
+}
+.post-section {
+  float: left;
+  width: 100%;
+  padding: @space;
+}
+.post-wrapper {
+  max-width: @type-max-one;
+}
+.post-body {
+  margin-top: -@space;
+}
+.post-title {
+  &:extend( .h1 );
+  margin-top: -7px;
+  margin-bottom: (@space - 7px);
+}
+.post-excerpt:after {
+  content: '...';
+}
+.post-body ul,
+.post-body ol {
+  &:extend( .list );
+}
+.post-body li {
+  &:extend( .list-item );
+}
+.post-body li:before {
+  &:extend( .list-item:before );
+}
+.post-body ul {
+  &:extend( .list--bull);
+}
+.post-body ul li {
+  &:extend( .list--bull .list-item );
+}
+.post-body ul li:before {
+  &:extend( .list--bull .list-item:before );
+}
+.post-body ol {
+  &:extend( .list--count );
+}
+.post-body ol li {
+  &:extend( .list--count .list-item );
+}
+.post-body ol li:before {
+  &:extend( .list--count .list-item:before );
+}
+.post-body li > ul,
+.post-body li > ol {
+  &:extend( li > ul );
+}
+.post-footer .post-wrapper:before,
+.post-comments .post-wrapper:before {
+  content: '';
+  position: absolute;
+  top: -@space;
+  width: 100%;
+}
+.post-meta .meta-plural {
+  display: none;
+}
+.post-meta .meta-share {
+  position: relative;
+}
+@media( min-width: @break-two-query ) {
+  .post {
+    margin-bottom: @space * 1.75;
+  }
+  .post-section {
+    float: left;
+    width: 100%;
+    padding: @space * 1.5;
+  }
+  .post-body {
+    margin-top: -@space * 1.5;
+  }
+  .post-wrapper {
+    max-width: @type-max-two;
+  }
+  .post-title {
+    margin-bottom: ( @space * 1.5 ) - 7px;
+  }
+  .post-tags {
+    margin-top: 0;
+  }
+  .post-title + .post-tags {
+    margin-top: -@space / 2;
+  }
+  .post-footer .post-wrapper:before,
+  .post-comments .post-wrapper:before {
+    top: -@space * 1.5;
+  }
+}
+@media( min-width: @break-three-query ) {
+  .post {
+    margin-bottom: @space * 2.25;
+  }
+  .post-section {
+    float: left;
+    width: 100%;
+    padding: @space * 2;
+  }
+  .post-body {
+    margin-top: -@space * 2;
+  }
+  .post-wrapper {
+    max-width: @type-max-three;
+  }
+  .post-title {
+    margin-top: -8px;
+    margin-bottom: @space * 2 - 8px;
+  }
+  .post-meta .meta-plural {
+    display: inline;
+  }
+  .post-meta .meta-link {
+    padding-right: @space;
+  }
+  .post-meta .popup,
+  .post-meta .popup:before,
+  .post-meta .popup:after {
+    right: 50%;
+  }
+  .post-meta .popup {
+    -webkit-transform: translate( 50%, 0 );
+    -moz-transform: translate( 50%, 0 );
+    transform: translate( 50%, 0 );
+    margin-bottom: @space;
+  }
+  .post-meta .popup[data-ani="slide-in-up-sm"] {
+    -webkit-animation-name: slide-in-up-mid;
+    animation-name: slide-in-up-mid;
+  }
+  .post-meta .popup[data-ani="fade-out-down-sm"] {
+    -webkit-animation-name: fade-out-down-mid;
+    animation-name: fade-out-down-mid;
+  }
+  .post-footer .post-wrapper:before,
+  .post-comments .post-wrapper:before {
+    top: -@space * 2;
+  }
+}
+@media( min-width: @break-four-query ) {
+  .post {
+    margin-bottom: @space * 3.25;
+  }
+  .post-section {
+    float: left;
+    width: 100%;
+    padding: @space * 3;
+  }
+  .post-body {
+    margin-top: -@space * 3;
+  }
+  .post-title {
+    margin-bottom: @space * 2.5;
+  }
+  .post-tags {
+    margin-top: @space;
+  }
+  .post-footer .post-wrapper:before,
+  .post-comments .post-wrapper:before {
+    top: -@space * 3;
+  }
+  .post-wrapper {
+    max-width: @type-max-four;
+  }
+}
+@media( min-width: @break-five-query ) {
+  .post {
+    margin-bottom: @space * 5.125;
+  }
+  .post-section {
+    padding: @space * 2.5;
+  }
+  .post-body {
+    margin-top: -@space * 2.5;
+  }
+  .post-wrapper {
+    max-width: @img-max-two;
+  }
+  .post-title {
+    margin-top: -10px;
+    margin-bottom: @space * 2.5 - 10px;
+  }
+  .post-tags {
+    margin-top: 8px;
+  }
+  .post-footer .post-wrapper:before,
+  .post-comments .post-wrapper:before {
+    top: -@space * 2.5;
+  }
+}
+@media( min-width: @break-six-query ) {
+  .post {
+    margin-bottom: @space * 7.125;
+  }
+  .post-section {
+    float: left;
+    width: 100%;
+    padding: @space * 3.5;
+  }
+  .post-body {
+    margin-top: -@space * 3.5;
+  }
+  .post-wrapper {
+    max-width: @type-max-five;
+  }
+  .post-title {
+    margin-top: -10px;
+    margin-bottom: @space * 3.5 - 10px;
+  }
+  .post-tags {
+    margin-top: @space * 1.5;
+  }
+  .post-footer .post-wrapper:before,
+  .post-comments .post-wrapper:before {
+    top: -@space * 3.5;
+  }
+}

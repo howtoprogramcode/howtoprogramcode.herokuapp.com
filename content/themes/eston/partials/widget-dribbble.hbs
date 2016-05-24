@@ -1,0 +1,45 @@
+{{!
+
+    Renders:
+      Dribbble Icon
+      Dribbble Author URL
+      Dribbble Author Title
+      Dribbble Media
+      Dribbble Likes Count
+      Dribbble Likes URL
+      Dribbble Comments Count
+      Dribbble Comments URL
+
+}}
+
+<div data-js="dribbble">
+  
+  <article class="post post--small post--overlay post--widget post--dribbble" data-ani="hide" data-js="widget hover">
+
+    <div class="post-inner" data-js="hover-inner">
+
+      <header class="post-section post-header" data-ani="hide" data-js="hover-header">
+        <div class="wrapper post-wrapper">
+
+          <a href="" class="avatar icon icon-dribbble post-author" target="_blank" data-js="widget-author-url">
+            <span class="avatar-title" data-js="widget-author-title"></span>
+          </a>
+
+        </div>
+      </header>
+
+      {{> "widget/media"}}
+
+      <footer class="post-section post-footer" data-ani="hide" data-js="hover-footer">
+        <div class="wrapper post-wrapper">
+
+          {{> "widget/meta"}}
+          
+        </div>
+      </footer>
+
+    </div>
+
+  </article>
+
+</div>

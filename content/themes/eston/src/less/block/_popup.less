@@ -1,0 +1,74 @@
+//
+// Popup.
+// -----------------------------------------------------------------------------
+// Popup wrapper. Parent needs `position:relative`.
+//
+// <div class="popup">
+//   <a class="popup-link">New</a>
+//   <a class="popup-link">Share</a>
+//   <a class="popup-link">Edit</a>
+//   <span class="popupp-item">1 of 3</span>
+// </div>
+//
+
+// Block.
+.popup,
+.popup:before,
+.popup:after {
+  &:extend( .s3 );
+  position: absolute;
+}
+.popup {
+  width: auto;
+  z-index: 1000;
+  right: 50%;
+  bottom: 100%;
+  padding-top: ( @space / 4 ) * 1.5;
+  padding-right: ( @space / 4 ) * 3;
+  padding-bottom: ( @space / 4 ) * 1.5;
+  padding-left: ( @space / 4 ) * 3;
+  margin-bottom: ( @space / 4 ) * 3;
+  white-space: nowrap;
+  -webkit-transform: translate( 50%, 0 );
+  -moz-transform: translate( 50%, 0 );
+  transform: translate( 50%, 0 );
+}
+.popup:before,
+.popup:after {
+  top: 100%;
+  right: 50%;
+  content: '';
+  height: 0;
+  width: 0;
+  border: solid transparent;
+  pointer-events: none;
+}
+.popup:before {
+  margin-top: 1px;
+  border-width: 7px;
+  margin-right: -7px;
+}
+.popup:after {
+  border-width: 6px;
+  margin-right: -6px;
+}
+
+// Elements.
+.popup-item,
+.popup-link {
+  float: left;
+  width: 100%;
+  clear: both;
+  padding-top: ( @space / 4 ) * 1.5;
+  padding-bottom: ( @space / 4 ) * 1.5;
+}
+
+// Clear margins.
+.popup .popup-item:first-child,
+.popup .popup-link:first-child {
+  padding-top: 0;
+}
+.popup .popup-item:last-child,
+.popup .popup-link:last-child{
+  padding-bottom: 0;
+}

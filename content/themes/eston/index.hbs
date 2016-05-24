@@ -1,0 +1,38 @@
+{{!
+
+    Renders:
+    	Post Preview
+      Widget Dribbble
+      Widget Instagram
+
+}}
+
+{{!< default}}
+
+{{! Featured Post }}
+{{#foreach posts}}
+
+  {{#if featured}}
+  
+  {{> "post-preview" }}
+  
+  {{/if}}
+
+{{/foreach}}
+
+{{! Normal Post }}
+{{#foreach posts}}
+
+	{{#unless featured}}
+
+  {{> "post-preview" }}
+
+  {{/unless}}
+
+{{/foreach}}
+
+{{! Widget Dribbble }}
+{{!> "widget-dribbble" }}
+
+{{! Widget Instagram }}
+{{!> "widget-instagram" }}

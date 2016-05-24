@@ -1,0 +1,41 @@
+//
+// Dialogue.
+// -----------------------------------------------------------------------------
+// Dialogue of a chat / conversation.
+//
+// <div class="dialogue">
+// 	 <div class="dialogue-line">
+//     <span class="dialogue-title">Dave</span>
+//     <span class="dialogue-text dialogue-text-alt">Shes my wife now</span>
+//   </div>
+// 	 <div class="dialogue-item">
+//     <span class="dialogue-title">Shop Keeper</span>
+//     <span class="dialogue-text"></span>
+//   </div>
+// </div>
+//
+
+// Block.
+.dialogue {
+	display: table;
+	width: 100%;
+	&:extend( .whitespace );
+}
+
+// Elements.
+.dialogue-line {
+	display: table;
+	padding-bottom: @space / 2;
+}
+.dialogue-title {
+	display: table-row;
+	&:extend( .s2 );
+}
+.dialogue-text {
+	display: table-row;
+}
+
+// Clear whitespace.
+.dialogue .dialogue-line:last-child {
+	padding-bottom: 0;
+}

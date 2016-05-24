@@ -1,0 +1,40 @@
+//
+// Animation Slide In Up Small.
+// -----------------------------------------------------------------------------
+// Element slides in and up, from half a space below its final position.
+//
+
+[data-ani="slide-in-up-sm"] {
+  -webkit-animation-name: slide-in-up-sm;
+  animation-name: slide-in-up-sm;
+}
+.ie [data-ani="slide-in-up-sm"] {
+  visibility: visible;
+  opacity: 1;
+}
+
+// Keyframes.
+@-webkit-keyframes slide-in-up-sm {
+  0% {
+    visibility: visible;
+    opacity: 1;
+    -webkit-transform: translateY( @space / 2 );
+  }
+  100% {
+    visibility: visible;
+    opacity: 1;
+    -webkit-transform: translateY( 0 );
+  }
+}
+@keyframes slide-in-up-sm {
+  0% {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY( @space / 2 );
+  }
+  100% {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY( 0 );
+  }
+}

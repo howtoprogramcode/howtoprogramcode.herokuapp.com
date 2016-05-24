@@ -1,0 +1,31 @@
+//
+// Post .
+// -----------------------------------------------------------------------------
+// Skin for post.
+//
+
+// Block.
+.post {}
+
+// Elements.
+.post-inner {
+  border-radius: 5px;
+  box-shadow: 0 1px 1px 0 @post-shadow;
+  -webkit-box-shadow: 0 1px 1px 0 @post-shadow;
+}
+.post-section {
+  background-color: @post-bg;
+}
+.post-body p a {
+  border-bottom: 1px dotted @anchor-border;
+}
+.post-body p a:hover {
+  border-bottom-color: @anchor-border-hover;
+}
+.post-body hr {
+  border-top: 1px solid @post-border;
+}
+.post-footer .post-wrapper:before,
+.post-comments .post-wrapper:before {
+  border-top: 1px solid @post-border;
+}

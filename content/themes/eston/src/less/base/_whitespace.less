@@ -1,0 +1,19 @@
+// Whitespace.
+// -----------------------------------------------------------------------------
+// Universal whitespace control.
+
+h1, h2, h3, h4, h5, h6, p, 
+ul, ol, dl,
+blockquote,
+ul, ol, dl,
+figure, iframe, embed, object,
+table,
+pre,
+hr,
+.whitespace {
+  margin-top: 0;
+  margin-bottom: @space * 1;
+  @media ( min-width: @break-three-query ) {
+    margin-bottom: @space * 1.5;
+  }
+}

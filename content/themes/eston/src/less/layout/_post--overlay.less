@@ -1,0 +1,38 @@
+//
+// Post Overlay.
+// -----------------------------------------------------------------------------
+// Hides `.post-body` and `.post-foot`. Reveals them on hover.
+//
+
+// Block.
+.post--overlay {}
+
+// Elements.
+.post--overlay .post-header,
+.post--overlay .post-footer {
+  position: absolute;
+  z-index: 5;
+  right: 0;
+  left: 0;
+}
+.post--overlay .post-header {
+  top: 0;
+}
+.post--overlay .post-footer {
+  bottom: 0;
+}
+.post--overlay .post-body,
+.post--overlay .post-footer .post-wrapper:before {
+  display: none;
+}
+.post--overlay .post-inner {
+  cursor: pointer;
+}
+.post--overlay .post-cover {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}

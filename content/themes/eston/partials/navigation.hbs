@@ -1,0 +1,44 @@
+{{!
+
+    Renders:
+      Header Navigation
+
+    Microdata:
+      Site Navigation Element
+      Site Navigation Element URL
+      Site Navigation Element Name
+
+}}
+
+<nav class="nav header-nav" role="navigation">
+  <!-- <span itemscope itemtype="http://schema.org/SiteNavigationElement" class="nav-item">
+    <a itemprop="url" href="{{@blog.url}}" title="Home" class="nav-link">
+      <span itemprop="name">Home</span>
+    </a>
+  </span> -->
+  <span itemscope itemtype="http://schema.org/SiteNavigationElement" class="nav-item">
+    <a itemprop="url" href="{{@blog.url}}" title="Articles" class="nav-link">
+      <span itemprop="name">Articles</span>
+    </a>
+  </span>
+  <!-- <span itemscope itemtype="http://schema.org/SiteNavigationElement" class="nav-item">
+    <a itemprop="url" href="{{@blog.url}}/tag/videos" title="Videos" class="nav-link">
+      <span itemprop="name">Videos</span>
+    </a>
+  </span>
+  <span itemscope itemtype="http://schema.org/SiteNavigationElement" class="nav-item">
+    <a itemprop="url" href="{{@blog.url}}/tag/interviews" title="Interviews" class="nav-link">
+      <span itemprop="name">Interviews</span>
+    </a>
+  </span>
+  <span itemscope itemtype="http://schema.org/SiteNavigationElement" class="nav-item">
+    <a itemprop="url" href="{{@blog.url}}/tag/products" title="Products" class="nav-link">
+      <span itemprop="name">Products</span>
+    </a>
+  </span> -->
+  <span itemscope itemtype="http://schema.org/SiteNavigationElement" class="nav-item">
+    <a itemprop="url" href="{{@blog.url}}/about-us" title="About Us" class="nav-link">
+      <span itemprop="name">About Us</span>
+    </a>
+  </span>
+</nav>

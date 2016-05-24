@@ -1,0 +1,20 @@
+{{!
+
+    Renders:
+      Author Link
+      Author Image
+      Author Name
+
+    Microdata:
+      Author
+
+}}
+
+{{#author}}
+<a href="{{url}}" class="avatar post-author">
+	{{#if image}}
+  <img src="{{image}}" alt="{{name}}" class="avatar-img">
+  {{/if}}
+  <span itemprop="author" class="avatar-title">{{name}}</span>
+</a>
+{{/author}}

@@ -1,0 +1,36 @@
+//
+// Avatar Large.
+// -----------------------------------------------------------------------------
+// An avatar, groovy. Use table / table cell for long names.
+//
+// <div class="avatar avatar--large">
+//   <img class="avatar-img">
+//   <h2 class="avatar-title">2 Chainz</h2>
+// </div>
+//
+// <div class="avatar avatar--large">
+//   <img class="avatar-img">
+//   <div class="avatar-inner">
+//     <h2 class="avatar-title">2 Chainz</h2>
+//     <span class="avatar-sub">Owner of 2 chains</span>
+//   </div>
+// </div>
+//
+
+// Block.
+.avatar--large {}
+
+// Elements.
+.avatar--large .avatar-title {
+	&:extend( .p );
+}
+.avatar--large .avatar-sub {
+	&:extend( .s3 );
+	line-height: @space;
+}
+.avatar--large .avatar-img {
+	width: @space * 4 + 4px;
+  height: @space * 4 + 4px;
+  margin-right: @space;
+  border-radius: 100%;
+}

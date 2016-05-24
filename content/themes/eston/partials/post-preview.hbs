@@ -1,0 +1,64 @@
+{{!
+
+    Renders:
+      Post Author Link
+      Post Author Image
+      Post Author Name
+      Post Title
+      Post Image / Embed
+      Post Excerpt
+      Post Tags
+      Post Meta
+      Post Meta Date
+      Post Meta Comments Count
+      Post Meta Share Count
+      Post Meta Share List
+
+    Microdata:
+      BlogPosting Headline
+      BlogPosting Url
+      BlogPosting Name
+      BlogPosting Image
+      BlogPosting Description
+      BlogPosting Keywords
+      BlogPosting Published
+
+}}
+
+<article itemscope itemtype="http://schema.org/BlogPosting" class="post{{^if image}}{{^has tag="_quote, _link, _chat, _audio, _video"}} post--text{{/has}}{{/if}}{{#if image}} post--cover{{^has tag="_quote, _link, _chat, _audio, _video"}} post--photo{{#has tag="_overlay"}} post--overlay{{/has}}{{/has}}{{/if}}{{#has tag="_quote"}} post--quote{{/has}}{{#has tag="_link"}} post--link{{/has}}{{#has tag="_chat"}} post--chat{{/has}}{{#has tag="_audio"}} post--cover post--audio{{/has}}{{#has tag="_video"}} post--cover post--video{{/has}}{{#is "index, author, tag"}} post--index{{/is}}" id="{{id}}" data-ani="hide" data-js="post{{#has tag="_overlay"}} hover{{/has}}">
+
+  <div class="post-inner" {{#if image}}{{^has tag="_quote, _link, _chat, _audio, _video"}}{{#has tag="_overlay"}}data-js="hover-inner"{{/has}}{{/has}}{{/if}}>
+
+    <header class="post-section post-header">
+      <div class="wrapper post-wrapper">
+
+      {{> "post/author" }}
+
+      </div>
+    </header>
+
+    {{> "post/media" }}
+
+    <section class="post-section post-body">
+      <div class="wrapper post-wrapper">
+
+      {{> "post/title" }}
+
+      {{> "post/excerpt" }}
+      
+      {{> "post/tags" }}
+
+      </div>
+    </section>
+
+    <footer class="post-section post-footer" {{#if image}}{{^has tag="_quote, _link, _chat, _audio, _video"}}{{#has tag="_overlay"}}data-ani="hide" data-js="hover-footer"{{/has}}{{/has}}{{/if}}>
+      <div class="wrapper post-wrapper">
+
+        {{> "post/meta" }}
+
+      </div>
+    </footer>
+
+  </div>
+
+</article>

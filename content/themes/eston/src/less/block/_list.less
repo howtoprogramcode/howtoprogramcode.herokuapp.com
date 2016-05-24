@@ -1,0 +1,34 @@
+//
+// List.
+// -----------------------------------------------------------------------------
+// A simple list, can be used listless.
+//
+// <ul class="list">
+//   <li class="list-item">Get Milk</li>
+// </ul>
+//
+// <div class="list">
+//   <a href="#" class="list-item">Apples</a>
+//   <a href="#" class="list-item">Oranges</a>
+//   <a href="#" class="list-item">Pears</a>
+// </div>
+//
+
+// Block.
+.list {
+  float: left;
+  width: 100%;
+  list-style: none;
+  &:extend( .whitespace );
+}
+
+// Elements.
+.list-item,
+.list-link {
+  float: left;
+  width: 100%;
+  clear: both;
+}
+.list .list-item .list {
+  margin-bottom: 0;
+}

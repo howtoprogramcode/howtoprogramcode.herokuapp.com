@@ -1,0 +1,28 @@
+{
+  "name": "Eston",
+  "version": "1.1.0",
+  "description": "A simple, notebook inspired, theme for Ghost",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://bitbucket.org/mikedidthis/ghost-eston.git"
+  },
+  "author": "mikedidthis",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://bitbucket.org/mikedidthis/ghost-eston/issues"
+  },
+  "homepage": "http://demos.mikedidthis.co.uk/ghost-eston/",
+  "devDependencies": {
+    "browserify": "^5.10.0",
+    "gulp": "^3.7.0",
+    "gulp-less": "^1.2.3",
+    "gulp-livereload": "^2.1.0",
+    "gulp-rename": "^1.2.0",
+    "gulp-uglify": "^0.3.0",
+    "vinyl-transform": "0.0.1"
+  },
+  "dependencies": {}
+}

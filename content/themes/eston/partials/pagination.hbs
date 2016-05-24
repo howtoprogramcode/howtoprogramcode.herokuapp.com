@@ -1,0 +1,26 @@
+{{!
+
+    Renders:
+      Pagination Current Page
+      Pagination Links
+
+}}
+
+<nav class="nav nav--pager main-pager" role="pagination" data-js="pager" data-ani="">
+
+  <span class="nav-item">
+    Page <span data-js="pager-current">{{page}}</span> of <span data-js="pager-total">{{pages}}</span>
+  </span>
+
+  <div class="nav-ctrl">
+
+    {{#if prev}}
+    <a rel="prev" href="{{page_url prev}}" class="nav-link nav-prev">Previous</a>
+    {{/if}}
+    {{#if next}}
+    <a rel="next" href="{{page_url next}}" class="nav-link nav-next" data-js="pager-next">Next</a>
+    {{/if}}
+
+  </div>
+
+</nav>

@@ -1,0 +1,96 @@
+//
+// Typography.
+// -----------------------------------------------------------------------------
+// Typography styles and helper classes.
+//
+html,
+.root {
+  font-size: 15px;
+}
+h1,
+.h1 {
+  font-size: 1.75rem;
+  line-height: @space * 2.5;
+}
+h2,
+.h2 {
+  font-size: 1.5rem;
+  line-height: @space * 2.25;
+}
+h3,
+.h3 {
+  font-size: 1.375rem;
+  line-height: @space * 2.125;
+}
+h4,
+h5,
+h6,
+.h4,
+.h5,
+.h6 {
+  font-size: 1.125rem;
+  line-height: @space * 1.625;
+}
+body,
+.p {
+  font-size: 1rem;
+  line-height: @space * 1.5;
+}
+small,
+.s1 {
+  font-size: .875rem;
+}
+.s2 {
+  font-size: .75rem;
+}
+.s3 {
+  font-size: .666rem;
+}
+@media screen and ( min-width: @break-three-query ) {
+  html,
+  .root {
+    font-size: 16px;
+  }
+  h1,
+  .h1 {
+    font-size: 2rem;
+    line-height: @space * 3;
+  }
+  h2,
+  .h2 {
+    font-size: 1.75rem;
+    line-height: @space * 2.5;
+  }
+  h3,
+  .h3 {
+    font-size: 1.5rem;
+    line-height: @space * 2.25;
+  }
+  h4,
+  .h4 {
+    font-size: 1.375rem;
+    line-height: @space * 2.125;
+  }
+}
+@media screen and ( min-width: @break-five-query ) {
+  h1,
+  .h1 {
+    font-size: 2.25rem;
+    line-height: @space * 3.5;
+  }
+  h2,
+  .h2 {
+    font-size: 2rem;
+    line-height: @space * 2.75;
+  }
+}
+@media ( min-width: @break-six-query ) {
+  html,
+  .root {
+    font-size: 17px;
+  }
+  body,
+  .p {
+    line-height: @space * 1.75;
+  }
+}

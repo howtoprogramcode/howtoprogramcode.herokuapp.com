@@ -1,0 +1,77 @@
+//
+// Main.
+// -----------------------------------------------------------------------------
+// Layout styles for Main.
+
+// Block.
+.main {
+  float: left;
+  width: 100%;
+  padding-top: @space * .75;
+  padding-bottom: @space * 1.5;
+}
+.main > *:last-child {
+  &:extend( .wrapper > *:last-child );
+}
+
+// Elements.
+.main-pager {
+  padding-top: @space * 1.5;
+}
+.main-pager .nav-next {
+  position: relative;
+}
+.main-pager .nav-prev + .nav-next:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: -@space / 2;
+}
+
+// Media Queries.
+@media( min-width: @break-three-query ) {
+  .main {
+    padding-top: @space * 1;
+    padding-bottom: @space * 2;
+  }
+  .main-pager {
+    padding-top: @space * 2;
+  }
+  .main-pager .nav-link {
+    margin-right: @space;
+    margin-left: @space;
+  }
+  .main-pager .nav-prev + .nav-next:before {
+    left: -@space;
+  }
+}
+@media( min-width: @break-four-query ) {
+  .main {
+    padding-top: @space * 1.5;
+    padding-bottom: @space * 3;
+  }
+  .main-pager {
+    padding-top: @space * 3;
+  }
+}
+@media( min-width: @break-five-query ) {
+  .main {
+    padding-top: @space * 5;
+    padding-bottom: @space * 5;
+    padding-left: ( @space * 5 ) + @sidebar;
+  }
+  .main-pager {
+    padding-top: @space * 5;
+  }
+}
+@media( min-width: @break-six-query ) {
+  .main {
+    padding-top: @space * 7;
+    padding-bottom: @space * 7;
+    padding-left: ( @space * 7 ) + @sidebar;
+  }
+  .main-pager {
+    padding-top: @space * 7;
+  }
+}

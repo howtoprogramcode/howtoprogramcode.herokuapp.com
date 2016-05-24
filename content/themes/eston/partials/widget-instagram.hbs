@@ -1,0 +1,43 @@
+{{!
+
+    Renders:
+      Instagram Icon
+      Instagram Author URL
+      Instagram Author Title
+      Instagram Image
+      Instagram Likes Count
+      Instagram Comments Count
+
+}}
+
+<div data-js="instagram">
+  
+  <article class="post post--small post--overlay post--widget post--instagram" data-ani="hide" data-js="widget hover">
+
+    <div class="post-inner" data-js="hover-inner">
+
+      <header class="post-section post-header" data-ani="hide" data-js="hover-header">
+        <div class="wrapper post-wrapper">
+
+          <a href="" target="_blank" class="avatar icon icon-instagram post-author" data-js="widget-author-url">
+            <span class="avatar-title" data-js="widget-author-title"></span>
+          </a>
+
+        </div>
+      </header>
+
+      {{> "widget/media"}}
+
+      <footer class="post-section post-footer" data-ani="hide" data-js="hover-footer">
+        <div class="wrapper post-wrapper">
+
+          {{> "widget/meta"}}
+          
+        </div>
+      </footer>
+
+    </div>
+
+  </article>
+
+</div>

@@ -1,0 +1,22 @@
+//
+// Post Quote.
+// -----------------------------------------------------------------------------
+// Skin for post--quote.
+//
+
+// Block
+.post--quote {}
+
+// Elements.
+.post--quote .post-body .post-wrapper > blockquote:first-child {
+	&:extend( .quote );
+}
+.post--quote .post-body .post-wrapper > blockquote:first-child > p {
+	&:extend( .quote-item );
+}
+.post--quote .post-body .post-wrapper > blockquote:first-child > p:last-child {
+	&:extend( .quote .quote-item all );
+}
+.post--quote .post-body .post-wrapper > blockquote:first-child + p {
+	&:extend( .quote-source all );
+}

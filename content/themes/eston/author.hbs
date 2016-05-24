@@ -1,0 +1,74 @@
+{{!
+
+    Renders:
+      Author Image
+      Author Name
+      Author Bio
+      Author Location
+      Author Posts Count
+      Author Website
+      Author Email
+      Post Preview
+      
+}}
+
+{{!< default}}
+
+{{#author}}
+
+<article class="post post--author" data-ani="" data-js="post">
+
+  <div class="post-inner">
+    
+    <header class="post-section post-header">
+      <div class="wrapper post-wrapper post-author">
+
+        <div class="avatar avatar--large">
+          {{#if image}}
+          <img class="avatar-img" src="{{image}}" alt="{{name}}">
+          {{/if}}
+          <div class="avatar-inner">
+            <h2 class="avatar-title">{{name}}</h2>
+            {{#if location}}
+            <span class="avatar-sub">{{location}}</span>
+            {{/if}}
+          </div>
+        </div>
+
+      </div>
+    </header>
+
+    <section class="post-section post-body">
+      <div class="wrapper post-wrapper">
+        <p>{{bio}}</p>
+      </div>
+    </section>
+
+    <footer class="post-section post-footer">
+      <div class="wrapper post-wrapper">
+
+        <div class="meta post-meta">
+          <span class="icon-ui icon-ui-post meta-item meta-date">{{plural ../pagination.total empty='0' singular='% post' plural='% posts'}}</span>
+          <div class="meta-inner">
+            {{#if website}}
+            <a href="{{website}}" target="_blank" title="{{website}}" class="icon-ui icon-ui-website meta-link"><span class="meta-plural">Website</span></a>
+            {{/if}}
+            {{#if email}}
+            <a href="mailto:{{email}}" target="_blank" title="{{email}}" class="icon-ui icon-ui-mail meta-link"><span class="meta-plural">Contact</span></a>
+            {{/if}}
+          </div>
+        </div>
+        
+      </div>
+    </footer>
+
+  </div>
+
+</article>
+{{/author}}
+
+{{#foreach posts}}
+
+  {{> "post-preview" }}
+
+{{/foreach}}

@@ -1,0 +1,32 @@
+//
+// Nav Pager.
+// -----------------------------------------------------------------------------
+// A horizontal collection of links / items, that acts like pagination.
+//
+// <div class="nav nav--pager">
+//   <a class="nav-link nav-prev">Prev</a>
+//   <a class="nav-link nav-next">Next</a>
+// </div>
+//
+
+// Block.
+.nav--pager {
+}
+
+// Elements.
+.nav--pager .nav-prev:before,
+.nav--pager .nav-next:after {
+  position: relative;
+  top: -1px;
+}
+.nav--pager .nav-prev:before {
+  content: '\2190';
+  margin-right: @space / 4;
+}
+.nav--pager .nav-next:after {
+  content: '\2192';
+  margin-left: @space / 4;
+}
+.nav-ctrl {
+  float: right;
+}

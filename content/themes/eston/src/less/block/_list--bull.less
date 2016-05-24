@@ -1,0 +1,36 @@
+//
+// List.
+// -----------------------------------------------------------------------------
+// Replicates an unordered list, but uses puesdo elements for styling purposes.
+//
+// <ul class="list list--bull">
+//   <li class="list-item">Get Milk</li>
+// </ul>
+//
+// <div class="list list--bull">
+//   <a href="#" class="list-item">Apples</a>
+//   <a href="#" class="list-item">Oranges</a>
+//   <a href="#" class="list-item">Pears</a>
+// </div>
+//
+
+// Block.
+.list--bull {}
+
+// Elements.
+// -----------------------------------------------------------------------------
+.list--bull .list-item {
+  position: relative;
+  float: left;
+  width: 100%;
+  padding-left: @space * 1.5 - 4px;
+}
+.list--bull .list-item:before {
+  position: absolute;
+  top: 1px;
+  left: 0;
+  content: '\2022';
+  font-family: 'Arial';
+  font-size: 1em;
+  text-align: left;
+}
